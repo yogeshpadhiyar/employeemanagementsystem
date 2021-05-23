@@ -21,7 +21,7 @@ For run the jar file following command :
 
 #### java -jar employeemanagementsystem-0.0.1-SNAPSHOT.jar
 
-Before any API test required some base database entry. Please execute it first :
+Before any API test required some base database entry. Please execute this first and add qualification if youo want :
 
 #### projectFolder/sql/tblQualificationMaster.sql
 
