@@ -1,6 +1,7 @@
 package com.silvertouch.employeemanagementsystem.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.OptBoolean;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,14 +21,14 @@ public class EmployeeMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @JsonFormat(pattern = "yyyy-MM-dd",lenient = OptBoolean.FALSE)
     @NotNull
     private Date joiningDate;
     @NotNull
-    private int salary;
+    private float salary;
     private String isFresherEmployee;
 
     @OneToOne(cascade = CascadeType.ALL)
+    @JsonManagedReference
     private PersonMaster personMaster;
 
     @ManyToOne
